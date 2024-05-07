@@ -13,140 +13,11 @@
 html{
     font-size: 62.5%;
 }
-
-/* Aplicando Grids al index html */
-#gridHome {
-    display: grid;
-    grid-template-columns: repeat(2 , 1fr);
-    grid-template-rows: 5rem 100rem 55rem 8rem;
-    grid-template-areas: 
-    "nav nav"
-    "inicio inicio"
-    "motivacion1 motivacion2"
-    "footer footer";
-}
-main {
-    grid-area: inicio;
-}
-.presentacionsc {
-    color: #51548C;
-    font-family: "Oswald";
-    font-weight: 400;
-    font-style: normal;
-    text-align: justify;
-    font-size: 3rem;
-}
-.presentacionsc {
-    display: flex;
-    flex-direction: center;
-    justify-content: center;
-    align-items: center;
-    margin-top: 4rem;
-    margin-bottom: 5rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-}
-#motivacion1{
-    grid-area: motivacion1;
-}
-#motivacion1 h2 {
-    display: flex;
-    justify-content: center;
-}
-#motivacion1 div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row-reverse;
-    padding-right: 5rem;
-    padding-left: 5rem;
-}
-.mejora {
-    width: 100rem;
-    border-radius: 50%;
-}
-#motivacion2{
-    grid-area: motivacion2;
-}
-#motivacion2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    padding-top: 5rem;
-}
-#motivacion2 h2 {
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    padding-right: 50rem;
-}
-#motivacion2 div {
-    display: flex;
-    justify-content: center;
-    width: 46rem;
-    height: 46rem;
-    padding-right: none;
-}
-.momento {
-    border-radius: 50%;
-}
-/* footer para todos */
-footer {
-    grid-area: footer;
-}
-footer div {
-    display: flex;
-    align-items: start;
-    justify-content: end;
-}
-footer p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-/* header para todos */
-header {
-    grid-area: nav;
-    background-color: #212226;
-}
-header nav ul li a {
-    color: #CCD4D9;
-}
-header nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-header nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0;
-}
-ul li {
-    list-style-type: none;
-    font-family: "Oswald";
-    font-weight: 600;
-    font-style: normal;
-    font-size: 1.2rem;
-    padding: 0 6rem;
-}
-ul li:last-child {
-    padding: 0 2rem 0 6rem;
-}
-/* tamaño de imagenes */
+/* tamaño de fuentes, imaganes y colores */
 .iconosc {
     display: inline;
     width: 5rem;
 }
-.eleccion {
-    width: 80rem;
-    height: 50rem;
-}
-/* body */
 body {
     background-color: #000000;
 }
@@ -185,64 +56,158 @@ p {
 a {
     text-decoration: none;
 }
-.usuario form {
-    width: 50%;
+/* Grids al index html */
+.gridHome {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: 5rem auto auto auto 6rem;
+    grid-template-areas: 
+    "nav nav"
+    "inicio inicio"
+    "motivacion1 motivacion1"
+    "motivacion2 motivacion2"
+    "footer footer";
 }
-.registro {
-    width: 50%;
+.Inicio {
+    grid-area: inicio;
 }
-.btn-enviar {
-    background-color: #CCD4D9;
+.presentacionsc {
+    color: #51548C;
+    font-family: "Oswald";
+    font-weight: 400;
+    font-style: normal;
+    text-align: justify;
+    font-size: 3rem;
+}
+.presentacionsc {
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+.motivacion1{
+    grid-area: motivacion1;
+}
+.motivacion1 h2 {
+    display: flex;
+    justify-content: center;
+}
+.motivacion1 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-right: 5rem;
+    padding-left: 5rem;
+}
+.mejora {
+    width: 100rem;
+    border-radius: 50%;
+}
+.motivacion2{
+    grid-area: motivacion2;
+}
+.motivacion2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 5rem;
+}
+.motivacion2 h2 {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding-right: 50rem;
+}
+.motivacion2 div {
+    display: flex;
+    justify-content: center;
+    width: 30rem;
+    height: 30rem;
+    padding: 0rem 0rem 3rem 0rem;
+}
+.momento {
+    border-radius: 50%;
+}
+/* footer para todos */
+footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 footer {
     background-color: #3f4d59;
 }
-/* footer nav a {
-    display: inline;
-}
-footer nav div {
-    left: 85%;
-    position: relative;
-    width: fit-content;
+footer nav {
+    grid-column: 3;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    align-content: stretch;
 }
 footer p {
-    color: #CCD4D9;
-    width: fit-content;
-    position: relative;
-    left: 50%;
-} */
-input {
-    display: block;
-    margin-bottom: 1rem;
-}
-textarea {
-    height: 5rem;
-}
-iframe {
-    width: 50rem;
-    height: 50rem;
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 svg {
     fill: #CCD4D9;
-    display: inline;
     width: 3rem;
     height: 3rem;
 }
+/* header para todos */
+header {
+    grid-area: nav;
+    background-color: #212226;
+}
+header nav ul li a {
+    color: #CCD4D9;
+}
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+}
+ul li {
+    list-style-type: none;
+    font-family: "Oswald";
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.2rem;
+    padding: 0 6rem;
+}
+ul li:last-child {
+    padding: 0 2rem 0 6rem;
+}
 /* grids para sobre nosotros */
-#nosotross {
+.nosotross {
     display: grid;
     grid-template-columns: repeat(2 , 1fr);
-    grid-template-rows: 5rem 100rem 70rem 8rem;
+    grid-template-rows: 5rem auto auto 6rem;
     grid-template-areas: 
     "nav nav"
     "inicio inicio"
     "profesores profesores"
     "footer footer";
 }
-#sobre-nosotros {
+.sobre-nosotros {
     grid-area: inicio;
 }
-#pofesores {
+.pofesores {
     grid-area: profesores;
 }
 .presentacion {
@@ -263,10 +228,10 @@ svg {
     padding-left: 5rem;
     padding-right: 5rem;
 }
-#profesores{
+.profesores{
     grid-area: profesores;
 }
-#profesores h2 {
+.profesores h2 {
     display: flex;
     justify-content: center;
 }
@@ -301,52 +266,52 @@ svg {
     border-radius: 5%;
 }
 /* grids para planes */
-#planess {
+.planess {
     display: grid;
     grid-template-columns: repeat(2 , 1fr);
-    grid-template-rows: 5rem 100rem 110rem 8rem;
+    grid-template-rows: 5rem auto auto 6rem;
     grid-template-areas: 
     "nav nav"
     "inicio inicio"
     "planes planes"
     "footer footer";
 }
-#planes {
+.planes {
     grid-area: inicio;
 }
-#clientes-todos {
+.clientes-todos {
     grid-area: planes;
 }
-#planes h1 {
+.planes h1 {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#planes p {
+.planes p {
     display: flex;
     align-items: start;
     justify-content: center;
     padding: 0rem 5rem 0rem 5rem;
 }
-#clientes-todos h2 {
+.clientes-todos h2 {
     display: flex;
     align-items: start;
     justify-content: center;
     padding: 4rem 0rem 0rem 0rem;
 }
-#cliente1 h3 {
+.cliente1 h3 {
     display: flex;
     justify-content: start;
     align-items: center;
     padding: 4rem 0rem 2rem 5rem;
 }
-#cliente1 div {
+.cliente1 div {
     display: flex;
     justify-content: start;
     align-items: center;
     padding-left: 5rem;
 }
-#cliente1 p {
+.cliente1 p {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -354,19 +319,19 @@ svg {
     padding-right: 5rem;
     padding-left: 5rem;
 }
-#cliente2 h3 {
+.cliente2 h3 {
     display: flex;
     justify-content: start;
     align-items: center;
     padding: 4rem 0rem 2rem 5rem;
 }
-#cliente2 div {
+.cliente2 div {
     display: flex;
     justify-content: start;
     align-items: center;
     padding-left: 5rem;
 }
-#cliente2 p {
+.cliente2 p {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -374,19 +339,19 @@ svg {
     padding-right: 5rem;
     padding-left: 5rem;
 }
-#cliente3 h3 {
+.cliente3 h3 {
     display: flex;
     justify-content: start;
     align-items: center;
     padding: 4rem 0rem 2rem 5rem;
 }
-#cliente3 div {
+.cliente3 div {
     display: flex;
     justify-content: start;
     align-items: center;
-    padding-left: 5rem;
+    padding: 0rem 0rem 4rem 5rem;
 }
-#cliente3 p {
+.cliente3 p {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -403,4 +368,160 @@ svg {
     width: 195rem;
     height: 59rem;
     border-radius: 5%;
+}
+/* grids para contacto */
+.contacto {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: 5rem auto auto auto 6rem;
+    grid-template-areas: 
+    "nav nav"
+    "consulta consulta"
+    "ubicacion1 ubicacion1"
+    "ubicacion usuario"
+    "footer footer";
+}
+.consulta {
+    grid-area: consulta;
+}
+.ubicacion1 {
+    grid-area: ubicacion1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ubicacion-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    padding: 0rem 5rem 5rem 5rem;
+}
+iframe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 160rem;
+    height: 75rem;
+    padding: 5rem 5rem 5rem 5rem;
+}
+.usuarioo {
+    grid-area: usuario;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.usuarioo form {
+    display: grid;
+    grid-column: 1fr;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+.mensaje {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.btn-enviar {
+    background-color: #CCD4D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80rem;
+    height: 5rem;
+}
+input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+select {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+textarea {
+    margin-bottom: 2rem;
+}
+/* grids para entrena con nosotros */
+.entrena {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: 5rem auto auto auto 6rem;
+    grid-template-areas: 
+    "nav nav"
+    "gracias gracias"
+    "eleccion usuariooo"
+    "registroo registroo"
+    "footer footer";
+}
+.gracias {
+    grid-area: gracias;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.eleccion {
+    grid-area: eleccion;
+    padding: 5rem 5rem 5rem 5rem;
+}
+.usuariooo {
+    grid-area: usuariooo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.usuariooo form {
+    display: grid;
+    grid-column: 1fr;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+.usuariooo form input {
+    width: 80rem;
+    height: 10rem;
+}
+.registroo {
+    grid-area: registroo;
+}
+.todavia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.todavia {
+    padding: 1rem 5rem 1rem 5rem;
+}
+.registro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 80%;
+    height: 20%;
+    margin: 2rem 5rem 5rem 18rem;
+}
+/* mobile */
+@media screen and (min-width: 320px) and (max-width: 766px) {
+    .gridHome {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+        "nav"
+        "inicio"
+        "motivacion1"
+        "motivacion2"
+        "footer";
+    }
+}
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+}
+
+/* desktop */
+@media screen and (min-width: 1024px) {
 }
