@@ -165,6 +165,7 @@ svg {
 header {
     grid-area: nav;
     background-color: #212226;
+    padding: none;
 }
 header nav ul li a {
     color: #CCD4D9;
