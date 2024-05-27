@@ -16,7 +16,7 @@ html{
 /* tamaño de fuentes, imaganes y colores */
 .iconosc {
     display: inline;
-    width: 5rem;
+    width: 25rem;
 }
 body {
     background-color: #000000;
@@ -167,8 +167,20 @@ header {
     background-color: #212226;
     padding: none;
 }
-header navbar navbar-expand-lg ul li a {
+.nav-link, .navbar-nav .nav-link.active {
     color: #CCD4D9;
+}
+.navbar-brand {
+    color: #CCD4D9;
+}
+.navbar {
+    padding: 0;
+}
+#navbarNav {
+    justify-content: flex-end;
+}
+.navbar-toggler {
+    font-size: 10rem;
 }
 header nav {
     display: flex;
@@ -519,6 +531,16 @@ textarea {
         "motivacion2"
         "footer";
     }
+    .nav-link, .navbar-nav .nav-link.active {
+        color: #CCD4D9;
+        font-size: 5rem;
+    }
+    .navbar-brand {
+        width: 10rem;
+    }
+    .navbar-toggler {
+        font-size: 10rem;
+    }
     .Inicio h1 {
         font-size: 14rem;
         padding: 2rem;
@@ -615,6 +637,283 @@ textarea {
     width: 100%;
     height: 100rem;
     border-radius: 5%;
+}
+/* planes */
+.planess {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "nav"
+    "inicio"
+    "planes"
+    "footer";
+}
+.planes {
+    grid-area: inicio;
+}
+.clientes-todos {
+    grid-area: planes;
+}
+.planes h1 {
+    font-size: 13rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.planes p {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding: 0rem 3rem 0rem 3rem;
+    font-size: 5rem;
+}
+.clientes-todos h2 {
+    display: flex;
+    font-size: 10rem;
+    align-items: start;
+    justify-content: center;
+    padding: 4rem 0rem 0rem 0rem;
+}
+.cliente1 h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 5rem 2rem 5rem;
+}
+.cliente1 div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.cliente1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-size: 4rem;
+}
+.cliente2 h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 5rem 2rem 5rem;
+}
+.cliente2 div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.cliente2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-size: 4rem;
+}
+.cliente3 h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 5rem 2rem 5rem;
+}
+.cliente3 div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    padding: 0rem 2rem 4rem 2rem;
+}
+.cliente3 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-size: 4rem;
+}
+.imgChica {
+    width: 59rem;
+    height: 40rem;
+    border-radius: 5%;
+}
+.imgChica3 {
+    width: 59rem;
+    height: 59rem;
+    border-radius: 5%;
+}
+/* entrena con nosotros */
+.entrena {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+    "nav"
+    "gracias"
+    "eleccion" 
+    "usuariooo"
+    "registroo"
+    "footer";
+}
+h1 {
+    font-size: 15rem;
+}
+h2 {
+    font-size: 10rem;
+}
+p {
+    font-size: 5rem;
+}
+.gracias {
+    grid-area: gracias;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input {
+    font-size: 5rem;
+}
+
+.eleccion {
+    grid-area: eleccion;
+    padding: 5rem 2rem 5rem 2rem;
+}
+.usuariooo {
+    grid-area: usuariooo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.usuariooo form {
+    display: grid;
+    grid-column: 1fr;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+.usuariooo form input {
+    width: 75rem;
+    height: 16rem;
+}
+.registroo {
+    grid-area: registroo;
+}
+.todavia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.todavia {
+    padding: 1rem 5rem 1rem 5rem;
+}
+.registro {
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 85%;
+    height: 10%;
+    margin: 2rem auto 5rem auto;
+}
+
+/* contacto */
+.contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: 
+    "nav"
+    "consulta"
+    "ubicacion1"
+    "ubicacion"
+    "usuario"
+    "footer";
+}
+h1 {
+    font-size: 13rem;
+}
+p {
+    font-size: 5rem;
+}
+.ubicacion-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    padding: 0rem 5rem 5rem 5rem;
+}
+iframe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 85rem;
+    height: 85rem;
+    padding: 5rem 5rem 5rem 5rem;
+}
+.usuarioo {
+    grid-area: usuario;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.usuarioo form {
+    display: grid;
+    grid-column: 1fr;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+.mensaje {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.btn-enviar {
+    font-size: 3rem;
+    background-color: #CCD4D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70rem;
+    height: 3rem;
+}
+.btn-enviar {
+    font-size: 3rem;
+    background-color: #CCD4D9;
+    display: flex;
+    flex-direction: column-reverse;
+}
+input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    width: 100%;
+    height: 6rem;
+}
+select {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 95%;
+    height: 4rem;
+}
+textarea {
+    height: 5rem;
+    margin-bottom: 2rem;
 }
 }
 /* tablet */
@@ -728,6 +1027,283 @@ textarea {
         height: 100rem;
         border-radius: 5%;
     }
+
+    /* planes */
+.planess {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "nav"
+    "inicio"
+    "planes"
+    "footer";
+}
+.planes {
+    grid-area: inicio;
+}
+.clientes-todos {
+    grid-area: planes;
+}
+.planes h1 {
+    font-size: 13rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.planes p {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding: 0rem 3rem 0rem 3rem;
+    font-size: 5rem;
+}
+.clientes-todos h2 {
+    display: flex;
+    font-size: 10rem;
+    align-items: start;
+    justify-content: center;
+    padding: 4rem 0rem 0rem 0rem;
+}
+.cliente1 h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 5rem 2rem 5rem;
+}
+.cliente1 div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.cliente1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-size: 4rem;
+}
+.cliente2 h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 5rem 2rem 5rem;
+}
+.cliente2 div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.cliente2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-size: 4rem;
+}
+.cliente3 h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 5rem 2rem 5rem;
+}
+.cliente3 div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 2rem 4rem 2rem;
+}
+.cliente3 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-size: 4rem;
+}
+.imgChica {
+    width: 59rem;
+    height: 40rem;
+    border-radius: 5%;
+}
+.imgChica3 {
+    width: 59rem;
+    height: 59rem;
+    border-radius: 5%;
+}
+/* entrena con nosotros */
+.entrena {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+    "nav"
+    "gracias"
+    "eleccion" 
+    "usuariooo"
+    "registroo"
+    "footer";
+}
+h1 {
+    font-size: 15rem;
+}
+h2 {
+    font-size: 10rem;
+}
+p {
+    font-size: 5rem;
+}
+.gracias {
+    grid-area: gracias;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input {
+    font-size: 5rem;
+}
+
+.eleccion {
+    grid-area: eleccion;
+    padding: 5rem 2rem 5rem 2rem;
+}
+.usuariooo {
+    grid-area: usuariooo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.usuariooo form {
+    display: grid;
+    grid-column: 1fr;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+.usuariooo form input {
+    width: 75rem;
+    height: 16rem;
+}
+.registroo {
+    grid-area: registroo;
+}
+.todavia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.todavia {
+    padding: 1rem 5rem 1rem 5rem;
+}
+.registro {
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 85%;
+    height: 10%;
+    margin: 2rem auto 5rem auto;
+}
+/* contacto */
+.contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: 
+    "nav"
+    "consulta"
+    "ubicacion1"
+    "ubicacion"
+    "usuario"
+    "footer";
+}
+h1 {
+    font-size: 13rem;
+}
+p {
+    font-size: 5rem;
+}
+.ubicacion-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    padding: 0rem 5rem 5rem 5rem;
+}
+iframe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 85rem;
+    height: 85rem;
+    padding: 5rem 5rem 5rem 5rem;
+}
+.usuarioo {
+    grid-area: usuario;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.usuarioo form {
+    display: grid;
+    grid-column: 1fr;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+.mensaje {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.btn-enviar {
+    font-size: 3rem;
+    background-color: #CCD4D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70rem;
+    height: 3rem;
+}
+.btn-enviar {
+    font-size: 3rem;
+    background-color: #CCD4D9;
+    display: flex;
+    flex-direction: column-reverse;
+}
+input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    width: 100%;
+    height: 6rem;
+}
+select {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 95%;
+    height: 4rem;
+}
+textarea {
+    height: 5rem;
+    margin-bottom: 2rem;
+}
 }
 
 /* desktop */
@@ -884,9 +1460,6 @@ textarea {
         grid-area: nav;
         background-color: #212226;
         padding: none;
-    }
-    header navbar navbar-expand-lg ul li a {
-        color: #CCD4D9;
     }
     header nav {
         display: flex;
