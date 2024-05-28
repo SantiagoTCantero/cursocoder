@@ -1,0 +1,26 @@
+footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+footer {
+    background-color: $gris;
+}
+footer nav {
+    grid-column: 3;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    align-content: stretch;
+}
+footer p {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+svg {
+    fill: $blanco;
+    width: 3rem;
+    height: 3rem;
+}
