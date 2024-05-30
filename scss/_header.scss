@@ -2,22 +2,41 @@ header {
     grid-area: nav;
     background-color: $negro;
     padding: none;
-}
-.nav-link, .navbar-nav .nav-link.active {
+    
+    .iconosc {
+        display: inline;
+        width: 5rem;
+        @include mobile {
+            display: inline;
+            width: 10rem;
+        }
+
+        @include tablet {
+            width: 15rem;
+        }
+    }
+    .nav-link, .navbar-nav .nav-link.active {
     color: $blanco;
-}
-.navbar-brand {
+    }
+        
+    .navbar-brand {
     color: $blanco;
-}
-.navbar {
+    }
+    .navbar {
     padding: 0;
-}
-#navbarNav {
+    }
+    #navbarNav {
     justify-content: flex-end;
-}
-.navbar-toggler {
+    }
+    .navbar-toggler {
     font-size: 10rem;
-}
+    @include mobile {
+        font-size: 5rem;
+    }
+    @include tablet {
+        font-size: 7rem;
+    }
+    }
 header nav {
     display: flex;
     flex-direction: row;
@@ -41,4 +60,5 @@ ul li {
 }
 ul li:last-child {
     padding: 0 2rem 0 6rem;
+}
 }

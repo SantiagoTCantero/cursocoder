@@ -6,9 +6,11 @@
 html{
     font-size: 62.5%;
 }
+@import "queris.scss";
 @import "fonts.scss";
 @import "header.scss";
 @import "footer.scss";
-@import "queris.scss";
-
-
+@import "logo.scss";
+@import "mobile";
+@import "desktop.scss";
+@import "tablet.scss";

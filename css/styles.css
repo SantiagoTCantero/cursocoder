@@ -10,11 +10,6 @@ html {
 }
 
 /* tamaño de fuentes, imaganes y colores */
-.iconosc {
-  display: inline;
-  width: 25rem;
-}
-
 body {
   background-color: #212226;
 }
@@ -64,43 +59,60 @@ header {
   background-color: #212226;
   padding: none;
 }
-
-.nav-link, .navbar-nav .nav-link.active {
+header .iconosc {
+  display: inline;
+  width: 5rem;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  header .iconosc {
+    display: inline;
+    width: 10rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  header .iconosc {
+    width: 15rem;
+  }
+}
+header .nav-link, header .navbar-nav .nav-link.active {
   color: #CCD4D9;
 }
-
-.navbar-brand {
+header .navbar-brand {
   color: #CCD4D9;
 }
-
-.navbar {
+header .navbar {
   padding: 0;
 }
-
-#navbarNav {
+header #navbarNav {
   justify-content: flex-end;
 }
-
-.navbar-toggler {
+header .navbar-toggler {
   font-size: 10rem;
 }
-
-header nav {
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  header .navbar-toggler {
+    font-size: 5rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  header .navbar-toggler {
+    font-size: 7rem;
+  }
+}
+header header nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-
-header nav ul {
+header header nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   padding: 0;
 }
-
-ul li {
+header ul li {
   list-style-type: none;
   font-family: "Oswald";
   font-weight: 600;
@@ -108,8 +120,7 @@ ul li {
   font-size: 1.2rem;
   padding: 0 6rem;
 }
-
-ul li:last-child {
+header ul li:last-child {
   padding: 0 2rem 0 6rem;
 }
 
@@ -144,9 +155,550 @@ svg {
   height: 3rem;
 }
 
-/* mobile */
-@media screen and (min-width: 320px) and (max-width: 766px) {
-  /* inicio */
+body {
+  background-color: #000000;
+}
+
+h1 {
+  color: #51548C;
+  font-family: "Oswald";
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  font-size: 6rem;
+}
+
+h2 {
+  color: #51548C;
+  font-family: "Oswald";
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  font-size: 4rem;
+}
+
+h3 {
+  color: #CCD4D9;
+  font-family: "Oswald";
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  font-size: 4rem;
+}
+
+p {
+  color: #CCD4D9;
+  font-family: "Oswald";
+  font-weight: 300;
+  font-style: normal;
+  text-align: justify;
+  font-size: 3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Grids al index html */
+.gridHome {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 5rem auto auto auto 6rem;
+  grid-template-areas: "nav nav" "inicio inicio" "motivacion1 motivacion1" "motivacion2 motivacion2" "footer footer";
+}
+
+.Inicio {
+  grid-area: inicio;
+}
+
+.presentacionsc {
+  color: #51548C;
+  font-family: "Oswald";
+  font-weight: 400;
+  font-style: normal;
+  text-align: justify;
+  font-size: 3rem;
+}
+
+.presentacionsc {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.motivacion1 {
+  grid-area: motivacion1;
+}
+
+.motivacion1 h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.motivacion1 div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding-right: 5rem;
+  padding-left: 5rem;
+}
+
+.mejora {
+  width: 60rem;
+  border-radius: 50%;
+}
+
+.motivacion2 {
+  grid-area: motivacion2;
+}
+
+.motivacion2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 5rem;
+}
+
+.motivacion2 h2 {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  padding-right: 50rem;
+}
+
+.motivacion2 div {
+  display: flex;
+  justify-content: center;
+  width: 30rem;
+  height: 30rem;
+  padding: 0rem 0rem 3rem 0rem;
+}
+
+.momento {
+  border-radius: 50%;
+}
+
+/* footer para todos */
+footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer {
+  background-color: #3f4d59;
+}
+
+footer nav {
+  grid-column: 3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  align-content: stretch;
+}
+
+footer p {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+svg {
+  fill: #CCD4D9;
+  width: 3rem;
+  height: 3rem;
+}
+
+/* header para todos */
+header {
+  grid-area: nav;
+  background-color: #212226;
+  padding: none;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+}
+
+ul li {
+  list-style-type: none;
+  font-family: "Oswald";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.2rem;
+  padding: 0 6rem;
+}
+
+ul li:last-child {
+  padding: 0 2rem 0 6rem;
+}
+
+/* grids para sobre nosotros */
+.nosotross {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 5rem auto auto 6rem;
+  grid-template-areas: "nav nav" "inicio inicio" "profesores profesores" "footer footer";
+}
+
+.sobre-nosotros {
+  grid-area: inicio;
+}
+
+.pofesores {
+  grid-area: profesores;
+}
+
+.presentacion {
+  color: #8697A6;
+  font-family: "Oswald";
+  font-weight: 400;
+  font-style: normal;
+  text-align: justify;
+  font-size: 3rem;
+}
+
+.presentacion {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.profesores {
+  grid-area: profesores;
+}
+
+.profesores h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.card-profesor h3 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 12rem;
+}
+
+.imagenp {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0rem 0rem 5rem 5rem;
+}
+
+.imagenp p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding-right: 5rem;
+  padding-left: 5rem;
+}
+
+.santi {
+  width: 138rem;
+  height: 50rem;
+  border-radius: 5%;
+}
+
+.lean {
+  width: 40rem;
+  height: 50rem;
+  border-radius: 5%;
+}
+
+/* grids para planes */
+.planess {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 5rem auto auto 6rem;
+  grid-template-areas: "nav nav" "inicio inicio" "planes planes" "footer footer";
+}
+
+.planes {
+  grid-area: inicio;
+}
+
+.clientes-todos {
+  grid-area: planes;
+}
+
+.planes h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.planes p {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding: 0rem 5rem 0rem 5rem;
+}
+
+.clientes-todos h2 {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding: 4rem 0rem 0rem 0rem;
+}
+
+.cliente1 h3 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 4rem 0rem 2rem 5rem;
+}
+
+.cliente1 div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 5rem;
+}
+
+.cliente1 p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding-right: 5rem;
+  padding-left: 5rem;
+}
+
+.cliente2 h3 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 4rem 0rem 2rem 5rem;
+}
+
+.cliente2 div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 5rem;
+}
+
+.cliente2 p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding-right: 5rem;
+  padding-left: 5rem;
+}
+
+.cliente3 h3 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 4rem 0rem 2rem 5rem;
+}
+
+.cliente3 div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0rem 0rem 4rem 5rem;
+}
+
+.cliente3 p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding-right: 5rem;
+  padding-left: 5rem;
+}
+
+.imgChica {
+  width: 60rem;
+  height: 40rem;
+  border-radius: 5%;
+}
+
+.imgChica3 {
+  width: 195rem;
+  height: 59rem;
+  border-radius: 5%;
+}
+
+/* grids para contacto */
+.contacto {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 5rem auto auto auto 6rem;
+  grid-template-areas: "nav nav" "consulta consulta" "ubicacion1 ubicacion1" "ubicacion usuario" "footer footer";
+}
+
+.consulta {
+  grid-area: consulta;
+}
+
+.ubicacion1 {
+  grid-area: ubicacion1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ubicacion-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 100;
+  padding: 0rem 5rem 5rem 5rem;
+}
+
+iframe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 160rem;
+  height: 75rem;
+  padding: 5rem 5rem 5rem 5rem;
+}
+
+.usuarioo {
+  grid-area: usuario;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.usuarioo form {
+  display: grid;
+  grid-column: 1fr;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.mensaje {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.btn-enviar {
+  background-color: #CCD4D9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80rem;
+  height: 5rem;
+}
+
+input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+select {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+textarea {
+  margin-bottom: 2rem;
+}
+
+/* grids para entrena con nosotros */
+.entrena {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 5rem auto auto auto 6rem;
+  grid-template-areas: "nav nav" "gracias gracias" "eleccion usuariooo" "registroo registroo" "footer footer";
+}
+
+.gracias {
+  grid-area: gracias;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eleccion {
+  grid-area: eleccion;
+  width: 50rem;
+  padding: 5rem 5rem 5rem 5rem;
+}
+
+.usuariooo {
+  grid-area: usuariooo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.usuariooo form {
+  display: grid;
+  grid-column: 1fr;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.usuariooo form input {
+  width: 60rem;
+  height: 5rem;
+}
+
+.registroo {
+  grid-area: registroo;
+}
+
+.todavia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todavia {
+  padding: 1rem 5rem 1rem 5rem;
+}
+
+.registro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 80%;
+  height: 20%;
+  margin: 2rem 5rem 5rem 18rem;
+}
+
+/* inicio */
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .gridHome {
     display: grid;
     grid-template-columns: 1fr;
@@ -155,7 +707,7 @@ svg {
   }
   .nav-link, .navbar-nav .nav-link.active {
     color: #CCD4D9;
-    font-size: 5rem;
+    font-size: 4rem;
   }
   .navbar-brand {
     width: 10rem;
@@ -248,12 +800,10 @@ svg {
   }
   .santi {
     width: 100%;
-    height: 100rem;
     border-radius: 5%;
   }
   .lean {
     width: 100%;
-    height: 100rem;
     border-radius: 5%;
   }
   /* planes */
@@ -516,369 +1066,6 @@ svg {
     margin-bottom: 2rem;
   }
 }
-/* tablet */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  /* inicio */
-  .gridHome {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas: "nav" "inicio" "motivacion1" "motivacion2" "footer";
-  }
-  .Inicio h1 {
-    font-size: 14rem;
-    padding: 2rem;
-  }
-  .presentacionsc {
-    color: #CCD4D9;
-    font-size: 10rem;
-    text-align: center;
-    margin: 0%;
-    padding: 0%;
-  }
-  .motivacion1 h2 {
-    font-size: 12em;
-  }
-  .motivacion1 div {
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 50%;
-  }
-  .motivacion1 div p {
-    text-align: justify;
-    font-size: 7rem;
-    color: #CCD4D9;
-    text-align: center;
-    margin: 0%;
-    padding: 0%;
-  }
-  .motivacion2 h2 {
-    font-size: 8rem;
-    text-align: center;
-    padding: 0rem;
-  }
-  .motivacion2 {
-    padding: 70rem none none 100rem;
-  }
-  .motivacion2 div img {
-    display: flex;
-    align-items: center;
-    width: 28rem;
-  }
-  header {
-    width: 100%;
-    height: 100%;
-  }
-  footer {
-    width: 100%;
-  }
-  /* sobre nosotros */
-  .nosotross {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas: "nav" "inicio" "profesores" "footer";
-  }
-  .sobre-nosotros h1 {
-    font-size: 13rem;
-    padding: 2rem;
-  }
-  .presentacion {
-    color: #CCD4D9;
-    font-size: 5rem;
-    text-align: center;
-    margin: 0%;
-    padding: 2rem;
-  }
-  .profesores h2 {
-    font-size: 10rem;
-  }
-  .card-profesor h3 {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding-left: 12rem;
-  }
-  .imagenp {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 1rem 1rem 1rem;
-  }
-  .imagenp p {
-    font-size: 5rem;
-  }
-  .santi {
-    width: 100%;
-    height: 100rem;
-    border-radius: 5%;
-  }
-  .lean {
-    width: 100%;
-    height: 100rem;
-    border-radius: 5%;
-  }
-  /* planes */
-  .planess {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas: "nav" "inicio" "planes" "footer";
-  }
-  .planes {
-    grid-area: inicio;
-  }
-  .clientes-todos {
-    grid-area: planes;
-  }
-  .planes h1 {
-    font-size: 13rem;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .planes p {
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    padding: 0rem 3rem 0rem 3rem;
-    font-size: 5rem;
-  }
-  .clientes-todos h2 {
-    display: flex;
-    font-size: 10rem;
-    align-items: start;
-    justify-content: center;
-    padding: 4rem 0rem 0rem 0rem;
-  }
-  .cliente1 h3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem 5rem 2rem 5rem;
-  }
-  .cliente1 div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  .cliente1 p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row-reverse;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    font-size: 4rem;
-  }
-  .cliente2 h3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem 5rem 2rem 5rem;
-  }
-  .cliente2 div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  .cliente2 p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row-reverse;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    font-size: 4rem;
-  }
-  .cliente3 h3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem 5rem 2rem 5rem;
-  }
-  .cliente3 div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 0rem 2rem 4rem 2rem;
-  }
-  .cliente3 p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row-reverse;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    font-size: 4rem;
-  }
-  .imgChica {
-    width: 59rem;
-    height: 40rem;
-    border-radius: 5%;
-  }
-  .imgChica3 {
-    width: 59rem;
-    height: 59rem;
-    border-radius: 5%;
-  }
-  /* entrena con nosotros */
-  .entrena {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas: "nav" "gracias" "eleccion" "usuariooo" "registroo" "footer";
-  }
-  h1 {
-    font-size: 15rem;
-  }
-  h2 {
-    font-size: 10rem;
-  }
-  p {
-    font-size: 5rem;
-  }
-  .gracias {
-    grid-area: gracias;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  input {
-    font-size: 5rem;
-  }
-  .eleccion {
-    grid-area: eleccion;
-    padding: 5rem 2rem 5rem 2rem;
-  }
-  .usuariooo {
-    grid-area: usuariooo;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .usuariooo form {
-    display: grid;
-    grid-column: 1fr;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-  }
-  .usuariooo form input {
-    width: 75rem;
-    height: 16rem;
-  }
-  .registroo {
-    grid-area: registroo;
-  }
-  .todavia {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .todavia {
-    padding: 1rem 5rem 1rem 5rem;
-  }
-  .registro {
-    font-size: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    width: 85%;
-    height: 10%;
-    margin: 2rem auto 5rem auto;
-  }
-  /* contacto */
-  .contacto {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto auto;
-    grid-template-areas: "nav" "consulta" "ubicacion1" "ubicacion" "usuario" "footer";
-  }
-  h1 {
-    font-size: 13rem;
-  }
-  p {
-    font-size: 5rem;
-  }
-  .ubicacion-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 100;
-    padding: 0rem 5rem 5rem 5rem;
-  }
-  iframe {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    width: 85rem;
-    height: 85rem;
-    padding: 5rem 5rem 5rem 5rem;
-  }
-  .usuarioo {
-    grid-area: usuario;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .usuarioo form {
-    display: grid;
-    grid-column: 1fr;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-  }
-  .mensaje {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-  .btn-enviar {
-    font-size: 3rem;
-    background-color: #CCD4D9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70rem;
-    height: 3rem;
-  }
-  .btn-enviar {
-    font-size: 3rem;
-    background-color: #CCD4D9;
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  input {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    width: 100%;
-    height: 6rem;
-  }
-  select {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    width: 95%;
-    height: 4rem;
-  }
-  textarea {
-    height: 5rem;
-    margin-bottom: 2rem;
-  }
-}
-/* desktop */
 @media screen and (min-width: 1024px) {
   .iconosc {
     display: inline;
@@ -1345,5 +1532,365 @@ svg {
     width: 80%;
     height: 20%;
     margin: 2rem 5rem 5rem 18rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .gridHome {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "nav" "inicio" "motivacion1" "motivacion2" "footer";
+  }
+  .Inicio h1 {
+    font-size: 14rem;
+    padding: 2rem;
+  }
+  .presentacionsc {
+    color: #CCD4D9;
+    font-size: 10rem;
+    text-align: center;
+    margin: 0%;
+    padding: 0%;
+  }
+  .motivacion1 h2 {
+    font-size: 12em;
+  }
+  .motivacion1 div {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
+  }
+  .motivacion1 div p {
+    text-align: justify;
+    font-size: 7rem;
+    color: #CCD4D9;
+    text-align: center;
+    margin: 0%;
+    padding: 0%;
+  }
+  .motivacion2 h2 {
+    font-size: 8rem;
+    text-align: center;
+    padding: 0rem;
+  }
+  .motivacion2 {
+    padding: 70rem none none 100rem;
+  }
+  .motivacion2 div img {
+    display: flex;
+    align-items: center;
+    width: 28rem;
+  }
+  header {
+    width: 100%;
+    height: 100%;
+  }
+  footer {
+    width: 100%;
+  }
+  /* sobre nosotros */
+  .nosotross {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "nav" "inicio" "profesores" "footer";
+  }
+  .sobre-nosotros h1 {
+    font-size: 13rem;
+    padding: 2rem;
+  }
+  .presentacion {
+    color: #CCD4D9;
+    font-size: 5rem;
+    text-align: center;
+    margin: 0%;
+    padding: 2rem;
+  }
+  .profesores h2 {
+    font-size: 10rem;
+  }
+  .card-profesor h3 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 12rem;
+  }
+  .imagenp {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1rem 1rem 1rem;
+  }
+  .imagenp p {
+    font-size: 5rem;
+  }
+  .santi {
+    width: 100%;
+    height: 100rem;
+    border-radius: 5%;
+  }
+  .lean {
+    width: 100%;
+    height: 100rem;
+    border-radius: 5%;
+  }
+  /* planes */
+  .planess {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "nav" "inicio" "planes" "footer";
+  }
+  .planes {
+    grid-area: inicio;
+  }
+  .clientes-todos {
+    grid-area: planes;
+  }
+  .planes h1 {
+    font-size: 13rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .planes p {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding: 0rem 3rem 0rem 3rem;
+    font-size: 5rem;
+  }
+  .clientes-todos h2 {
+    display: flex;
+    font-size: 10rem;
+    align-items: start;
+    justify-content: center;
+    padding: 4rem 0rem 0rem 0rem;
+  }
+  .cliente1 h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 5rem 2rem 5rem;
+  }
+  .cliente1 div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .cliente1 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-size: 4rem;
+  }
+  .cliente2 h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 5rem 2rem 5rem;
+  }
+  .cliente2 div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .cliente2 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-size: 4rem;
+  }
+  .cliente3 h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 5rem 2rem 5rem;
+  }
+  .cliente3 div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 2rem 4rem 2rem;
+  }
+  .cliente3 p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-size: 4rem;
+  }
+  .imgChica {
+    width: 59rem;
+    height: 40rem;
+    border-radius: 5%;
+  }
+  .imgChica3 {
+    width: 59rem;
+    height: 59rem;
+    border-radius: 5%;
+  }
+  /* entrena con nosotros */
+  .entrena {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "nav" "gracias" "eleccion" "usuariooo" "registroo" "footer";
+  }
+  h1 {
+    font-size: 15rem;
+  }
+  h2 {
+    font-size: 10rem;
+  }
+  p {
+    font-size: 5rem;
+  }
+  .gracias {
+    grid-area: gracias;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  input {
+    font-size: 5rem;
+  }
+  .eleccion {
+    grid-area: eleccion;
+    padding: 5rem 2rem 5rem 2rem;
+  }
+  .usuariooo {
+    grid-area: usuariooo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .usuariooo form {
+    display: grid;
+    grid-column: 1fr;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .usuariooo form input {
+    width: 75rem;
+    height: 16rem;
+  }
+  .registroo {
+    grid-area: registroo;
+  }
+  .todavia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .todavia {
+    padding: 1rem 5rem 1rem 5rem;
+  }
+  .registro {
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 85%;
+    height: 10%;
+    margin: 2rem auto 5rem auto;
+  }
+  /* contacto */
+  .contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: "nav" "consulta" "ubicacion1" "ubicacion" "usuario" "footer";
+  }
+  h1 {
+    font-size: 13rem;
+  }
+  p {
+    font-size: 5rem;
+  }
+  .ubicacion-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    padding: 0rem 5rem 5rem 5rem;
+  }
+  iframe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 85rem;
+    height: 85rem;
+    padding: 5rem 5rem 5rem 5rem;
+  }
+  .usuarioo {
+    grid-area: usuario;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .usuarioo form {
+    display: grid;
+    grid-column: 1fr;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .mensaje {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .btn-enviar {
+    font-size: 3rem;
+    background-color: #CCD4D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70rem;
+    height: 3rem;
+  }
+  .btn-enviar {
+    font-size: 3rem;
+    background-color: #CCD4D9;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    width: 100%;
+    height: 6rem;
+  }
+  select {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 95%;
+    height: 4rem;
+  }
+  textarea {
+    height: 5rem;
+    margin-bottom: 2rem;
   }
 }/*# sourceMappingURL=styles.css.map */
