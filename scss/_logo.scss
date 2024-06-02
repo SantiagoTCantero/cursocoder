@@ -1,8 +1,8 @@
 body {
-    background-color: #000000;
+    background-color: $negro;
 }
 h1 {
-    color: #51548C;
+    color: $azul;
     font-family: "Oswald";
     font-weight: 700;
     font-style: normal;
@@ -10,7 +10,7 @@ h1 {
     font-size: 6rem;
 }
 h2 {
-    color: #51548C;
+    color: $azul;
     font-family: "Oswald";
     font-weight: 500;
     font-style: normal;
@@ -18,7 +18,7 @@ h2 {
     font-size: 4rem;
 }
 h3 {
-    color: #CCD4D9;
+    color: $blanco;
     font-family: "Oswald";
     font-weight: 500;
     font-style: normal;
@@ -26,7 +26,7 @@ h3 {
     font-size: 4rem;
 }
 p {
-    color: #CCD4D9;
+    color: $blanco;
     font-family: "Oswald";
     font-weight: 300;
     font-style: normal;
